@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mentallama.css">
+<title>MetalLLM Chatbot</title>
+</head>
+<body>
+<div class="page">
+  <div class="bg-glow"></div>
+  <div class="bg-grid"></div>
+
+  <header>
+    <div class="logo">
+      <div class="logo-icon">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+          <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="white"/>
+        </svg>
+      </div>
+      <span class="logo-name">Mental<span>LLaMA</span></span>
+    </div>
+    <span class="demo-badge">Demo</span>
+  </header>
+
+  <main>
+    <div class="bot-stage">
+      <div class="bot-hover" id="botHover">
+        <div class="bot-bob" id="botBob">
+
+          <div class="antenna">
+            <div class="bulb" id="bulb"></div>
+            <div class="antenna-stem"></div>
+          </div>
+
+          <div class="bot-head" id="botHead">
+            <!-- Speech bubble -->
+            <div class="bubble" id="bubble">
+              <div class="thinking-dots" id="thinkingDots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="answer-text" id="answerText">
+                <span id="answerContent"></span><span class="caret" id="caret"></span>
+              </div>
+              <div class="bubble-arrow"></div>
+            </div>
+
+            <!-- Face screen -->
+            <div class="face-screen">
+              <div class="eyes-row">
+                <div class="eye">
+                  <div class="pupil" id="pupilL">
+                    <div class="pupil-h1"></div>
+                    <div class="pupil-h2"></div>
+                  </div>
+                </div>
+                <div class="eye">
+                  <div class="pupil" id="pupilR">
+                    <div class="pupil-h1"></div>
+                    <div class="pupil-h2"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="mouth-row">
+                <div class="mouth-smile"    id="mouthSmile"></div>
+                <div class="mouth-thinking" id="mouthThink"></div>
+                <div class="mouth-talking"  id="mouthTalk"></div>
+              </div>
+            </div>
+
+            <div class="cheek left"></div>
+            <div class="cheek right"></div>
+          </div>
+
+          <div class="bot-body">
+            <div class="arm left"  id="armL"></div>
+            <div class="arm right" id="armR"></div>
+            <div class="torso">
+              <div class="chest">
+                <div class="chest-core"></div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /bot-bob -->
+      </div><!-- /bot-hover -->
+    </div><!-- /bot-stage -->
+
+    <!-- Câu hỏi người dùng vừa gửi -->
+    <div class="user-question" id="userQuestion">
+      <span class="user-label">BẠN</span>
+      <span class="user-bubble" id="userQuestionText"></span>
+    </div>
+
+    <!-- Ô nhập liệu -->
+    <div class="input-bar">
+      <input type="text" id="inputField" placeholder="Hỏi Metal bất cứ điều gì…" autocomplete="off" />
+      <button class="send-btn" id="sendBtn" aria-label="Gửi">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M12 19V5M12 5l-6 6M12 5l6 6" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Câu hỏi template (người dùng nhấn vào để gửi nhanh) -->
+    <div class="suggestions" id="suggestions">
+      <button class="chip" onclick="ask('Bạn là ai?')">Bạn là ai?</button>
+      <button class="chip" onclick="ask('Kể một chuyện cười')">Kể một chuyện cười</button>
+      <button class="chip" onclick="ask('Giúp tôi viết email')">Giúp tôi viết email</button>
+    </div>
+  </main>
+</div>
+
+<script src="mentallama.js"></script>
+</body>
+</html>
