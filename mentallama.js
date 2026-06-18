@@ -268,7 +268,7 @@ botHover.addEventListener('click', () => {
 // ─────────────────────────────────────────────
 //  INIT
 // ─────────────────────────────────────────────
-const GREETING = 'Xin chào! Mình là Metal. Hỏi mình bất cứ điều gì nhé!';
+const GREETING = 'Đây là chuyên gia sức khỏe tinh thần. Có câu hỏi thì nhập vào ô bên dưới hỏi mau, không thì mời đi chỗ khác.';
 setTimeout(() => startTalking(GREETING), 650);
 
 render();
